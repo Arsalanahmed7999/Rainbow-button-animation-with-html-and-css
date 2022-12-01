@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+align-items: center;
+justify-content: center;
+height: 680px;
+width: 100vw;
+background-color: rgb(10, 8, 8);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px white;
+    height: 400px;
+    width: 500px;
+    border-radius: 4px;
+}
+
+button{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    height: 175px;
+    width: 275px;
+    background-color: rgb(10, 8, 8);
+    left: 10px;
+    top: 10px;
+}
+
+button::after{
+    content: 'Hover Me';
+    position: absolute;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+    font-size: 25px;
+    left: 100px;
+    top: 85px;
+}
+
+@keyframes rainbow {
+    to{
+        background-position: 2500vh;
+    }
+}
+
+button:hover{
+    animation: rainbow 30s infinite linear;
+}
